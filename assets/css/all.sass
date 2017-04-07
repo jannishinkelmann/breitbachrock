@@ -1,0 +1,112 @@
+@import "bourbon"
+@import "_import/settings.sass"
+
+body, html
+  +size(100%)
+  margin: 0
+
+body
+  position: fixed
+  background:
+    image: url(../img/bg.jpg)
+    repeat: no-repeat
+    size: cover
+    position: center top
+    attachment: fixed
+
+  div.container
+    height: 90vh
+    @include padding(5vh 5vw)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    div.bbr-main-logo
+      z-index: 2
+      max-height: 45vh
+      width: 90vw
+
+      svg
+        max-height: 45vh
+        max-width: 100%
+        filter: drop-shadow(0 1vw 2vw $colorLogoShadow)
+
+        fill-rule: evenodd
+        clip-rule: evenodd
+
+        stroke:
+          linecap: round
+          linejoin: round
+          miterlimit: 1.5
+
+        path
+          fill: $colorLogoFill
+          stroke: $colorLogoStroke
+          stroke-width: 0.5%
+
+    section.text
+      z-index: 1
+      max-height: 50%
+      p
+        margin: 3vh
+        color: $colorText
+        text-align: center
+        text-shadow: 0 0.2em 0.3em $colorLogoShadow
+
+        font:
+          family: $fontStack
+          size: modular-scale(5)
+          weight: 400
+
+        strong
+          font-weight: bold
+          font-size: modular-scale(3)
+
+        small
+          font-size: modular-scale(-3)
+
+
+  @media all and (max-width: 640px)
+    div.container section.text
+      p
+        font-size: modular-scale(4)
+
+      strong
+        font-size: modular-scale(3)
+
+      small
+        font-size: modular-scale(-3)
+
+  @media all and (max-width: 420px)
+    div.container section.text
+      p
+        font-size: modular-scale(3)
+
+      strong
+        font-size: modular-scale(3)
+
+      small
+        font-size: modular-scale(-3)
+
+  @media all and (max-width: 380px)
+    div.container section.text
+      p
+        font-size: modular-scale(2)
+
+      strong
+        font-size: modular-scale(3)
+
+      small
+        font-size: modular-scale(-3)
+
+  @media all and (max-width: 330px)
+    div.container section.text
+      p
+        font-size: modular-scale(1)
+
+      strong
+        font-size: modular-scale(3)
+
+      small
+        font-size: modular-scale(-3)
