@@ -28,24 +28,18 @@ body
       width: 90vw
 
       svg
+        overflow: visible
+        z-index: 3
         max-height: 45vh
         max-width: 100%
         filter: drop-shadow(0 1vw 2vw $colorLogoShadow)
 
-        fill-rule: evenodd
-        clip-rule: evenodd
-
-        stroke:
-          linecap: round
-          linejoin: round
-          miterlimit: 1.5
-
         path
           fill: $colorLogoFill
           stroke: $colorLogoStroke
-          stroke-width: 0.5%
+          stroke-width: 5px
 
-    section.text
+    div.text
       z-index: 1
       max-height: 50%
       p
