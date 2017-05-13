@@ -1,0 +1,39 @@
+doctype html
+html(lang="de")
+  head
+    include meta.jade
+    block pageTitle
+    link(rel="stylesheet", href="assets/css/all.css")
+    link(rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico")
+  body
+    header
+      a(href="/")
+        div.bbr-logo.header-logo
+          include logo.svg
+
+      a(href="/")
+        div.menu-burger-ico
+          include menu_ico.svg
+
+      nav
+        if site == "start"
+          a.active(href="/index.html") Start
+        else
+          a(href="/index.html") Start
+        if site == "agb"
+          a.active(href="/agb.html") AGB
+        else
+          a(href="/agb.html") AGB
+        if site == "impressum"
+          a.active(href="/impressum.html") Impressum
+        else
+          a(href="/impressum.html") Impressum
+        if site == "datenschutzhinweise"
+          a.active(href="/datenschutzhinweise.html") Datenschutzhinweise
+        else
+          a(href="/datenschutzhinweise.html") Datenschutzhinweise
+
+    block mainContent
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="assets/js/all-min.js")

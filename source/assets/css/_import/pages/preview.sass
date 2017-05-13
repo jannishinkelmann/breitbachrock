@@ -1,0 +1,59 @@
+body
+
+  div.container-preview
+    height: 85vh
+    @include padding(2vh 5vw 5vh 5vw)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    div.bbr-main-logo
+      z-index: 2
+      max-height: 40vh
+      width: 90vw
+      text-align: center
+
+      svg
+        overflow: visible
+        z-index: 3
+        max-height: 40vh
+        max-width: 100%
+        filter: drop-shadow(0 0.5vw 0.5vw $colorLogoShadow)
+
+        path
+          stroke-width: 5px
+
+    div.text
+      z-index: 1
+      max-height: 50%
+      p
+        @include padding(0)
+        margin: 3vh
+        text-align: center
+        text-shadow: 0 0.5vw 0.5vw $colorLogoShadow
+        font-size: modular-scale(5)
+
+        strong
+          font-weight: 500
+          font-size: modular-scale(3)
+
+        small
+          font-size: modular-scale(-3)
+          font-weight: 300
+
+
+        @media all and (max-width: 640px)
+          font-size: modular-scale(4)
+
+        @media all and (max-width: 640Fpx)
+          font-size: modular-scale(4)
+
+        @media all and (max-width: 420px)
+          font-size: modular-scale(3.2)
+
+        @media all and (max-width: 380px)
+          font-size: modular-scale(2.6)
+
+        @media all and (max-width: 330px)
+          font-size: modular-scale(1.5)
