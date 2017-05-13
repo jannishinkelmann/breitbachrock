@@ -1,7 +1,11 @@
-- var site = "start"
 extends _import/page_layout
 block pageTitle
   title Breitbach Rock Open Air 2017
+  
+block navBar
+  nav 
+    - var site = "start"
+    include _import/nav.jade
 
 block mainContent
   div.container-preview

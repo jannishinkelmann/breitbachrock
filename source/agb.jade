@@ -1,8 +1,12 @@
-
 extends _import/page_layout
 
 block pageTitle
   title AGB - Breitbach Rock Open Air 2017
+  
+block navBar
+  nav 
+    - var site = "agb"
+    include _import/nav.jade
 
 block mainContent
   div.container

@@ -1,8 +1,12 @@
-- var site = "impressum"
 extends _import/page_layout
 
 block pageTitle
   title Impressum - Breitbach Rock Open Air 2017
+  
+block navBar
+  nav 
+    - var site = "impressum"
+    include _import/nav.jade
   
 block mainContent
   div.container
