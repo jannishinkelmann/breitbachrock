@@ -1,0 +1,39 @@
+{
+  "name": "breitbach-rock-website",
+  "authors": [
+    "Jannis Hinkelmann <jannis.hinkelmann@gmail.com> (http://jannis-hinkelmann.de)"
+  ],
+  "description": "Webpage of the Breitbach Rock Festival",
+  "main": [
+    "index.html",
+    "main.js"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "homepage": "http://breitbachrock.de",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jannishinkelmann/breitbachrock"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "normalize-css": "^7.0.0",
+    "jquery": "^3.2.1"
+  }
+}

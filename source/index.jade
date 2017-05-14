@@ -1,20 +1,22 @@
-doctype html
-html(lang="de")
-  head
-    include _import/meta.jade
-    title Breitbach Rock Open Air 2017
-    link(rel="stylesheet", href="assets/css/all.css")
-    link(rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico")
-  body
-    div.container
-      div.bbr-main-logo
-        include _import/logo.svg
-    
-      div.text
-        p.description Open Air Festival 2017
+extends _import/page_layout
+block pageTitle
+  title Breitbach Rock Open Air 2017
+  
+block navBar
+  nav 
+    - var site = "start"
+    include _import/nav.jade
 
-        p.date
-          strong 10. Juni
+block mainContent
+  div.container-preview
+    div.bbr-logo.bbr-main-logo
+      include _import/logo.svg
+  
+    div.text
+      p.description Open Air Festival 2017
 
-        p.wait-for-it 
-          small weitere Informationen folgen...
+      p.date
+        strong 10. Juni
+
+      p.wait-for-it 
+        small weitere Informationen folgen...

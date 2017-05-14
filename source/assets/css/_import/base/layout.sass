@@ -1,0 +1,159 @@
+body, html
+  +size(100%)
+  margin: 0
+
+body
+  #sidebarToggle
+    display: none
+
+    &:checked
+      ~ div.sideBar
+        right: 0px
+
+      ~ div.pageContent
+        position: fixed
+        filter: brightness(25%)
+
+        header > a
+          display: none
+
+      ~ label.toggle
+        position: fixed
+        right: 20px + $sideBarWidth
+
+        div.close-menu-ico
+          display: inline-block
+
+        div.menu-burger-ico
+          display: none
+
+  div.sideBar
+    +position(fixed, 0px (-$sideBarWidth) 0px null)
+    z-index: 1000
+    width: $sideBarWidth
+    background-color: black
+
+    nav
+      margin: 20px
+
+      >a
+        display: block
+        margin-bottom: 2em
+
+  background:
+    image: url(../img/bg.jpg)
+    repeat: no-repeat, no-repeat
+    size: cover
+    position: center top
+    blend-mode: overlay-normal
+    attachment: fixed
+
+  div.pageContent
+    background:
+      image: url(../img/bg.jpg)
+      repeat: no-repeat, no-repeat
+      size: cover
+      position: center top
+      blend-mode: overlay-normal
+      attachment: fixed
+
+    height: 100%
+
+  color: $colorText
+  font:
+    family: $fontStack
+    weight: 400
+
+  h1, h2, h3, h4, h5
+    padding-top: 1em
+
+  a
+    color: $colorLogoFill
+    text-decoration: none
+    outline: 0
+
+  a:hover, a:focus
+    color: $colorHighlight
+
+  .bbr-logo
+    path
+      fill: $colorLogoFill
+      stroke: $colorLogoStroke
+
+  .title
+    padding-top: 0
+
+  header
+    display: block
+    position: relative
+    z-index: 100
+    max-width: $contentSectionWidth
+    margin-left: auto
+    margin-right: auto
+    height: $navHeight
+    padding-left: 20px
+    padding-right: 20px
+
+    .header-logo
+      width: 75px
+      position: absolute
+      margin-top: 10px
+
+      @media all and (max-width: $navCollapseWidth)
+        left: 20px
+
+    nav
+      display: inline-block
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+
+      a
+        margin-left: 2em
+        color: white
+        @include padding(0.5em null)
+
+      a:first-child
+        margin-left: 0
+
+      a.active
+        border-bottom: 2px solid white
+        pointer-events: none
+        cursor: default
+
+      @media all and (max-width: $navCollapseWidth)
+        display: none
+
+  label.toggle
+    cursor: pointer
+    +size(40px)
+    display: none
+    position: absolute
+    top: 13px
+    z-index: 500
+    right: 20px
+
+    svg
+      fill: white
+
+    div.close-menu-ico
+      display: none
+
+    @media all and (max-width: $navCollapseWidth)
+      display: inline-block
+
+  div.container
+    text-align: center
+
+    div.box
+      text-align: left
+      display: inline-block
+      @include margin(20px null 0px null)
+      @media all and (min-width: 1024px)
+        @include margin(null null 20px null)
+        p
+          padding-left: 1em
+      @include padding(20px)
+      background-color: $overlayBg
+      max-width: $contentSectionWidth
