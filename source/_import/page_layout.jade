@@ -1,0 +1,33 @@
+doctype html
+html(lang="de")
+  head
+    include meta.jade
+    block pageTitle
+    link(rel="stylesheet", href="assets/css/all.css")
+    link(rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico")
+    
+  body
+    input#sidebarToggle(type="checkbox" name="" value="")
+    
+    div.sideBar
+      block navBar
+      
+    label.toggle(for="sidebarToggle")
+      div.menu-burger-ico
+        include menu_ico.svg
+        
+      div.close-menu-ico
+        include cross_ico.svg 
+    
+    div.pageContent
+      header
+        a(href="/")
+          div.bbr-logo.header-logo
+            include logo.svg   
+
+        block navBar
+
+      block mainContent
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="assets/js/all-min.js")
