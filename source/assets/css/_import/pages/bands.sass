@@ -1,0 +1,38 @@
+div.bands
+  img
+    max-width: 50%
+    height: auto
+    float: left
+    margin-bottom: 1em
+    margin-right: 1.5em
+    margin-left: 0em
+    @media all and (min-width: 1150px)
+      margin-left: 1em
+
+    @media all and (max-width: 640px)
+      max-width: 100%
+
+  section.band:nth-child(2n)
+    img
+      float: right
+      margin-right: 0em
+      margin-left: 1.5em
+
+  section.band
+    margin-bottom: 2em
+    +clearfix()
+
+    h3
+      font-family: $chineseRocks
+      font-size: 3em
+      padding-top: 0.5em
+      margin-bottom: 0px
+
+      @media all and (max-width: 640px)
+        font-size: 2em
+
+      @media all and (max-width: 480px)
+        font-size: 1.7em
+
+    p:first
+      font-weight: light

@@ -14,12 +14,14 @@ html(lang="de")
       
     label.toggle(for="sidebarToggle")
       div.menu-burger-ico
-        include menu_ico.svg
+        include icons/menu_ico.svg
         
       div.close-menu-ico
-        include cross_ico.svg 
+        include icons/cross_ico.svg 
     
     div.pageContent
+      div.backgroundWrapper
+    
       header
         a(href="/")
           div.bbr-logo.header-logo
@@ -28,5 +30,26 @@ html(lang="de")
         block navBar
 
       block mainContent
+      
+      footer
+        div.footerContent
+          section.logo
+            a(href="/")
+              div.bbr-logo.footer-logo
+                include logo.svg
+            
+          section.links #[a(href="/impressum.html") Impressum] | #[a(href="/agb.html") AGB] | #[a(href="/datenschutzhinweise.html") Datenschutz]
+          section.socialmedia
+            a(href="https://www.facebook.com/breitbachrock" target="_blanc")
+              div.socialButton
+                include icons/facebook.svg
+            a(href="https://www.twitter.com/breitbachrock" target="_blanc")
+              div.socialButton
+                include icons/twitter.svg
+            a(href="https://www.instagram.com/breitbachrock" target="_blanc")
+              div.socialButton
+                include icons/instagram.svg
+      
+      
       
     //script(src="assets/js/all.js")

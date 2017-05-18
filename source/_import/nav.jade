@@ -1,20 +1,8 @@
-if site == "start"
-  a.active(href="/index.html") Start
-else
-  a(href="/index.html") Start
-if site == "agb"
-  a.active(href="/agb.html") AGB
-else
-  a(href="/agb.html") AGB
-if site == "campingregeln"
-  a.active(href="/campingregeln.html") Campingregeln
-else
-  a(href="/campingregeln.html") Campingregeln
-if site == "impressum"
-  a.active(href="/impressum.html") Impressum
-else
-  a(href="/impressum.html") Impressum
-if site == "datenschutzhinweise"
-  a.active(href="/datenschutzhinweise.html") Datenschutzhinweise
-else
-  a(href="/datenschutzhinweise.html") Datenschutzhinweise
+-var sites = [ { keyword:"start", url:"/index.html", title:"Start" }, { keyword:"bands", url:"/bands.html", title:"Bands" }, { keyword:"tickets", url:"/tickets.html", title:"Tickets" }, { keyword:"anfahrt", url:"/anfahrt.html", title:"Anfahrt" }]
+//, { keyword:"kontakt", url:"/kontakt.html", title:"Kontakt" }
+
+- for s in sites
+    if site == s.keyword
+      a.active(href=s.url) #{s.title}
+    else
+      a(href=s.url) #{s.title}
