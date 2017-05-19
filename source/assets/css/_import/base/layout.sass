@@ -76,7 +76,7 @@ body
         p
           padding-left: 1em
       background-color: $overlayBg
-      box-shadow: 0 5px 10px $overlayBg
+      box-shadow: 0 5px 10px darken($overlayBg, 50%)
       backdrop-filter: blur(3px)
 
   color: $colorText
@@ -165,6 +165,19 @@ body
 
     @media all and (max-width: $navCollapseWidth)
       display: inline-block
+
+  .twoColContainer
+    display: flex
+    justify-content: space-around
+
+    section
+      max-width: 40%
+
+    @media all and (max-width: 1140px)
+      flex-direction: column
+
+      section
+        max-width: 100%
 
   footer
     .footerContent
