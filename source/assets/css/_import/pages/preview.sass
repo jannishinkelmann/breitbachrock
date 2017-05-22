@@ -1,11 +1,14 @@
 body
-
   div.container-preview
-    @include padding(10vh 5vw 5vh 5vw)
+    @include padding(7vh 5vw 3vh 5vw)
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
+    max-width: $contentSectionWidth
+
+    @media all and (min-width: 1150px)
+      @include margin(null auto null auto)
 
     div.bbr-main-logo
       z-index: 2
@@ -26,9 +29,11 @@ body
     div.text
       z-index: 1
       max-height: 50%
+      @include margin(2em 0)
+
       p
         @include padding(0)
-        margin: 3vh
+        margin: 0.25em
         text-align: center
         text-shadow: 0 0.1em 0.1em $colorLogoShadow
         font-size: modular-scale(5)
@@ -53,3 +58,98 @@ body
 
         @media all and (max-width: 450px)
           font-size: modular-scale(1)
+
+    div.box
+      // @media all and (max-width: 1150px)
+      position: relative
+      width: 90%
+
+      div.fullbox>h2
+        padding-top: 0
+
+      div.halfbox
+        float: left
+        width: 47%
+        margin-left: 3%
+        margin-top: 2em
+
+        &:nth-of-type(2n)
+          margin-right: 3%
+          margin-left: 0
+
+        @media all and (max-width: 860px)
+          width: 100%
+          float: none
+          margin-left: 0
+
+          &:nth-of-type(2n)
+            margin-right: 0
+
+        img
+          width: 100%
+          height: auto
+
+      a.bandThumb
+        &:hover
+          color: $colorLogoFill
+        div.thumbnailWrapper
+          height: 33vw
+          position: relative
+          transition: all 200ms ease-in-out
+
+          h3
+            font-family: $chineseRocks
+            font-size: 3em
+            text-shadow: 0.1em 0.1em 0.1em $colorLogoShadow
+            @include margin(0)
+            @include padding(0)
+            position: absolute
+            right: 1em
+            bottom: 1em
+            filter: none
+
+            @media all and (max-width: 920px)
+              font-size: 2.5em
+
+            @media all and (max-width: 860px)
+              font-size: 2em
+
+            @media all and (max-width: 720px)
+              font-size: 1.6em
+
+            @media all and (max-width: 640px)
+              font-size: 1.2em
+
+            @media all and (max-width: 400px)
+              font-size: 1em
+
+          background:
+            repeat: no-repeat, no-repeat
+            size: 100%
+            blend-mode: overlay-normal
+
+          &:hover
+            font-size: modular-scale(2)
+            text-shadow: 0.5em 1em 1em $colorLogoShadow
+            background-size: 105%
+            filter: brightness(120%)
+
+          &.horses
+            background:
+              image: url(/assets/img/horses.jpg)
+              position: center 70%
+
+          &.herzlos
+            background:
+              image: url(/assets/img/herzlos.jpg)
+              position: 60% top
+
+          &.godl
+            background:
+              image: url(/assets/img/godl.jpg)
+              position: center 20%
+
+          &.blike
+            background:
+              image: url(/assets/img/blike.jpg)
+              position: center top

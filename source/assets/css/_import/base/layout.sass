@@ -3,7 +3,12 @@ body, html
   margin: 0
 
 html
-  background-color: black
+  background:
+    image: url(../img/bg.jpg)
+    repeat: no-repeat, no-repeat
+    size: cover
+    blend-mode: overlay-normal
+    attachment: fixed
 
 body
 
@@ -15,7 +20,7 @@ body
         right: 0px
 
       ~ div.pageContent
-        position: fixed
+        //position: fixed
         filter: brightness(25%)
 
         header > a
@@ -30,6 +35,8 @@ body
 
         div.menu-burger-ico
           display: none
+
+  padding-top: $navHeight
 
   div.sideBar
     +position(fixed, 0px (-$sideBarWidth) 0px null)
@@ -46,18 +53,18 @@ body
 
   div.pageContent
     div.backgroundWrapper
-      height: 100vh
+      min-height: 100vh
       width: 100vw
       position: fixed
+      top: 0
+      bottom: 0
       z-index: -1
 
       background:
         image: url(../img/bg.jpg)
         repeat: no-repeat, no-repeat
         size: cover
-        //position: center center
         blend-mode: overlay-normal
-        //attachment: fixed
 
     div.box
       width: 86vw
@@ -73,8 +80,11 @@ body
         @include margin(null auto null auto)
         @include padding(null 40px)
         width: $contentSectionWidth
+
+      @media all and (min-width: 520px)
         p
           padding-left: 1em
+
       background-color: $overlayBg
       box-shadow: 0 5px 10px darken($overlayBg, 50%)
       backdrop-filter: blur(3px)
@@ -106,53 +116,66 @@ body
 
   header
     display: block
-    position: relative
+    position: fixed
+    top: 0px
+    width: 100%
     z-index: 100
-    max-width: $contentSectionWidth
-    margin-left: auto
-    margin-right: auto
     height: $navHeight
-    padding-left: 20px
-    padding-right: 20px
+    background-color: rgba(0, 0, 0, 0.9)
+    box-shadow: 0 5px 10px rgba(10, 10, 10, 0.6)
+    backdrop-filter: blur(3px)
 
-    .header-logo
-      width: 75px
-      position: absolute
-      margin-top: 10px
+    .headerWrapper
+      display: block
+      position: relative
+      z-index: 100
+      max-width: $contentSectionWidth
+      margin-left: auto
+      margin-right: auto
+      height: $navHeight
+      padding-left: 20px
+      padding-right: 20px
+
+      .header-logo
+        width: 75px
+        position: absolute
+        margin-top: 10px
 
 
 
-      @media all and (max-width: 1150px)
-        left: 7%
+        @media all and (max-width: 1150px)
+          left: 7%
 
-    nav
-      display: inline-block
-      position: absolute
-      left: 50%
-      top: 50%
-      transform: translate(-50%,-50%)
+      nav
+        display: inline-block
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        margin-top: -5px
 
-      a
-        margin-left: 2em
-        color: white
-        @include padding(0.5em null)
+        a
+          margin-left: 2em
+          color: white
+          @include padding(0.5em null)
+          text-shadow: 0 0.1em 0.2em black
 
-      a:first-child
-        margin-left: 0
+        a:first-child
+          margin-left: 0
 
-      a.active
-        border-bottom: 2px solid white
-        pointer-events: none
-        cursor: default
+        a.active
+          border-bottom: 2px solid white
+          pointer-events: none
+          cursor: default
 
-      @media all and (max-width: $navCollapseWidth)
-        display: none
+        @media all and (max-width: $navCollapseWidth)
+          display: none
 
   label.toggle
     cursor: pointer
     +size(40px)
     display: none
-    position: absolute
+    position: fixed
     top: 13px
     z-index: 500
     right: 3%
