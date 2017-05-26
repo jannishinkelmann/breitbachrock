@@ -64,14 +64,25 @@ body
       position: relative
       width: 90%
 
-      div.fullbox>h2
-        padding-top: 0
+      div.fullbox
+        img
+          max-width: 50%
+          height: auto
+          float: left
+          margin-right: 1em
+          margin-bottom: 1em
+
+          @media all and (max-width: 640px)
+            max-width: 100%
+            float: none
+            margin-left: 0em
 
       div.halfbox
         float: left
         width: 47%
         margin-left: 3%
         margin-top: 2em
+        margin-bottom: 2em
 
         &:nth-of-type(2n)
           margin-right: 3%
