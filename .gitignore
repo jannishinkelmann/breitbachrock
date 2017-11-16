@@ -3,7 +3,7 @@
 
 ### CodeKit ###
 # General CodeKit files to ignore
-config.codekit3
+# config.codekit3
 /min
 
 ### CodeKit Patch ###
