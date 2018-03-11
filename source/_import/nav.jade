@@ -1,8 +1,9 @@
--var sites = [ { keyword:"bands", url:"/bands.html", title:"Bands" }, { keyword:"camping", url:"/camping.html", title:"Camping" }, { keyword:"lageplan", url:"/lageplan.html", title:"Lageplan" }, { keyword:"tickets", url:"/tickets.html", title:"Tickets" }, { keyword:"anfahrt", url:"/anfahrt.html", title:"Anfahrt" }]
+-var sites = [ { keyword:"bands", url:"/bands.html", title:"Bands", enabled:"false" }, { keyword:"camping", url:"/camping.html", title:"Camping", enabled:"true" }, { keyword:"lageplan", url:"/lageplan.html", title:"Lageplan", enabled:"false" }, { keyword:"tickets", url:"/tickets.html", title:"Tickets", enabled:"false" }, { keyword:"anfahrt", url:"/anfahrt.html", title:"Anfahrt", enabled:"true" }, { keyword:"bbr17", url:"/bbr17.html", title:"BBR17", enabled:"true" }]
 //, { keyword:"kontakt", url:"/kontakt.html", title:"Kontakt" }
 
 - for s in sites
-    if site == s.keyword
-      a.active(href=s.url) #{s.title}
-    else
-      a(href=s.url) #{s.title}
+    if s.enabled == "true"
+      if site == s.keyword
+        a.active(href=s.url) #{s.title}
+      else
+        a(href=s.url) #{s.title}
