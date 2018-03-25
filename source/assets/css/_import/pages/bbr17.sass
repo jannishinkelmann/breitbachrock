@@ -4,6 +4,9 @@ body
       height: 30vh
       position: relative
       transition: all 200ms ease-in-out
+      @media all and (max-width: 860px)
+        width: 100%
+        height: 20vh
 
       div.textWrapper
         font-size: 2.2em
@@ -64,3 +67,129 @@ body
         background:
           image: url(/assets/img/blike.jpg)
           position: center top
+
+    section.galerie
+      display: flex
+      flex-wrap: wrap
+
+      div
+        height: 70vh
+        position: relative
+        transition: all 200ms ease-in-out
+
+        &.horses1
+          background:
+            image: url(/assets/img/galerie/Horses1.jpg)
+            position: 40% 30%
+
+          width: 60%
+
+        &.horses2
+          background:
+            image: url(/assets/img/galerie/Horses2.jpg)
+            position: 40% 35%
+
+          width: 40%
+
+        &.horses3
+          background:
+            image: url(/assets/img/galerie/Horses3.jpg)
+            position: 40% 40%
+
+          width: 40%
+
+        &.horses4
+          background:
+            image: url(/assets/img/galerie/Horses4.jpg)
+            position: center center
+
+          width: 60%
+
+        &.horses5
+          background:
+            image: url(/assets/img/galerie/Horses5.jpg)
+            position: center 55%
+
+          width: 100%
+
+
+        &.herzlos1
+          background:
+            image: url(/assets/img/galerie/Herzlos1.jpg)
+            position: 30% 30%
+
+          width: 60%
+
+        &.herzlos2
+          background:
+            image: url(/assets/img/galerie/Herzlos2.jpg)
+            position: 45% 35%
+
+          width: 40%
+
+        &.herzlos3
+          background:
+            image: url(/assets/img/galerie/Herzlos3.jpg)
+            position: 75% center
+
+          width: 100%
+
+        &.herzlos4
+          background:
+            image: url(/assets/img/galerie/Herzlos4.jpg)
+            position: 25% 25%
+
+          width: 40%
+
+        &.herzlos5
+          background:
+            image: url(/assets/img/galerie/Herzlos5.jpg)
+            position: 70% 20%
+
+          width: 60%
+
+        &.herzlos6
+          background:
+            image: url(/assets/img/galerie/Herzlos6.jpg)
+            position: center center
+
+          width: 100%
+
+        &.godl1
+          background:
+            image: url(/assets/img/galerie/GodL1.jpg)
+            position: 45% 30%
+
+          width: 60%
+
+        &.godl2
+          background:
+            image: url(/assets/img/galerie/GodL2.jpg)
+            position: 45% 35%
+
+          width: 40%
+
+        &.godl3
+          background:
+            image: url(/assets/img/galerie/GodL3.jpg)
+            position: center 40%
+
+          width: 100%
+
+        &.blike1
+          background:
+            image: url(/assets/img/galerie/Blike1.jpg)
+            position: 60% 30%
+
+          width: 40%
+
+        &.blike2
+          background:
+            image: url(/assets/img/galerie/Blike2.jpg)
+            position: center 80%
+
+          width: 60%
+      div.galerie
+        @media all and (max-width: 860px)
+          width: 100%
+          height: 60vh

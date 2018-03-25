@@ -1,6 +1,6 @@
 div.bands
   img
-    max-width: 60%
+    max-width: 45%
     height: auto
     float: left
     margin-bottom: 1em
@@ -19,6 +19,13 @@ div.bands
   section.band
     margin-bottom: 2em
     +clearfix()
+
+    div.links
+      ul
+        list-style-type: none
+
+        li
+          margin-bottom: 0.5em
 
     div.responsiveContainer
       width: 50%
@@ -72,3 +79,5 @@ div.bands
         display: inline-block
         padding-right: 0px
         margin-right: auto
+  p.right
+    text-align: right
