@@ -1,0 +1,59 @@
+extends _import/page_layout
+
+block pageTitle
+  title Jugendschutz - Breitbach Rock Open Air
+
+block navBar
+  nav 
+    - var site = "jugendschutzhinweise"
+    include _import/nav.jade
+
+block mainContent
+  div.box.rules.jugendschutz
+    h2.title Jugendschutzhinweise
+    h2 Bestimmungen zum Jugendschutz am Breitbach Rock Festival 2018
+    
+    table
+      tr
+        th Alter von (Lebensjahr)
+        th Alter bis einschl. (Lebensjahr)
+        th 
+          p Zutrittsbestimmungen
+      tr
+        td 0
+        td 6
+        td 
+          p Kindern unter 7 Jahren ist der Aufenthalt auf dem Festivalgelände nicht erlaubt.
+      tr
+        td 7
+        td 15
+        td 
+          p Festivalgelände: mit Erziehungsberechtigtem
+          p Campingplatz: mit Erziehungsberechtigtem
+      tr
+        td 16
+        td 17
+        td 
+          p Jugendliche von 16 oder 17 Jahren ohne Erziehungs- oder Sorgeberechtigten haben bis 24:00 Uhr das Festivalgelände zu verlassen.
+          p Konzertgelände (ab 24:00 Uhr): mit Sorgeberechtigtem
+          p Campingplatz: mit Sorgeberechtigtem
+      tr
+        td 18
+        td ∞
+        td 
+          p Konzertgelände: erlaubt 
+          p Campingplatz: erlaubt
+          
+      
+    
+    h3 Erziehungsberechtigter 
+    p Eltern, bzw. Vormund des Kindes
+    h3 Sorgeberechtigter
+    p Eltern, Vormund, bzw. Dritter, auf den von Eltern oder Vormund die Sorgeberechtigung für die Zeit der Veranstaltung übertragen wurde. Bei Begleitung des Jugendlichen durch einen Sorgeberechtigten muss die #[a(href="/assets/doc/Sorgeberechtigung.pdf" target="_blanc") Vereinbarung zur Sorgeberechtigung] rechtsverbindlich ausgefertigt und unterschrieben sein. Diese ist mit Ausweiskopien der Eltern bzw. des Vormunds an der Kasse abgeben. 
+    p Wir behalten uns vor, eine Übertragung des Sorgerechtes nicht zu akzeptieren (z.B. bei Zweifel am Zustandekommen der Übertragung oder Eignung der Person, an welche das Sorgerecht übertragen wurde).
+    h3 Festivalgelände
+    p Gesamtes Festival inkl. Camping, Parkplatz
+    h3 Konzertgelände 
+    p der geschlossene Bereich, in dem die Bühnen stehen
+    h3 Campingplatz 
+    p abgegrenztes Areal, das für das Einrichten von Nachtlagern den Festivalbesuchern vom Veranstalter zur Verfügung gestellt wird

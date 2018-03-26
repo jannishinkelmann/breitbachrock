@@ -11,7 +11,6 @@ html
     attachment: fixed
 
 body
-
   #sidebarToggle
     display: none
 
@@ -25,6 +24,8 @@ body
 
         header > a
           display: none
+
+
 
       ~ label.toggle
         position: fixed
@@ -102,7 +103,7 @@ body
     weight: 400
     smoothing: antialiased
 
-  h1, h2, h3, h4, h5
+  h1, h3, h4, h5
     padding-top: 1em
 
   a
@@ -175,8 +176,19 @@ body
           pointer-events: none
           cursor: default
 
-        @media all and (max-width: $navCollapseWidth)
+  @media all and (max-width: $navCollapseWidth)
+    header
+      z-index: 200
+      .headerWrapper
+
+        nav
           display: none
+
+    h2.title
+      position: fixed
+      top: 5px
+      z-index: 201
+      font-size: 1.2em
 
   label.toggle
     cursor: pointer
