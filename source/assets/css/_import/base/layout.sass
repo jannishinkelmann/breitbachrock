@@ -1,6 +1,7 @@
 body, html
   +size(100%)
   margin: 0
+  position: relative
 
 html
   background:
@@ -19,13 +20,10 @@ body
         right: 0px
 
       ~ div.pageContent
-        //position: fixed
         filter: brightness(25%)
 
         header > a
           display: none
-
-
 
       ~ label.toggle
         position: fixed
@@ -176,19 +174,24 @@ body
           pointer-events: none
           cursor: default
 
+
+      h2.title
+        font-size: 1.2em
+        display: none
+        position: absolute
+        top: 0.25em
+
   @media all and (max-width: $navCollapseWidth)
     header
       z-index: 200
       .headerWrapper
-
         nav
           display: none
+        h2.title
+          display: block
 
     h2.title
-      position: fixed
-      top: 5px
-      z-index: 201
-      font-size: 1.2em
+      display: none
 
   label.toggle
     cursor: pointer
@@ -257,11 +260,6 @@ body
             +margin(2px)
             filter: drop-shadow(0 2px 1px $colorLogoShadow)
 
-            // &:hover
-            //   filter: drop-shadow(0 5px 20px $colorLogoShadow)
-            //   +size(44px)
-            //   +margin(0px)
-
 
             svg
               +size(100%, 100%)
@@ -274,12 +272,6 @@ body
         .footer-logo
           width: 75px
           position: inline
-
-      .links
-        // position: absolute
-        // left: 50%
-        // top: 50%
-        // transform: translate(-50%, -50%)
 
         a
           color: white
