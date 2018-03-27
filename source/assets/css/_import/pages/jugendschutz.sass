@@ -1,0 +1,20 @@
+body
+  div.pageContent
+    div.box.rules
+      background-color: black
+
+      &.jugendschutz
+        table
+          border-collapse: collapse
+          @media all and (max-width: 640px)
+            font-size: 0.6em
+
+        th, td
+          border: 1px solid $colorText
+          padding: 1em
+          text-align: center
+
+          p
+            padding: 0
+            margin: 0
+            text-align: left
