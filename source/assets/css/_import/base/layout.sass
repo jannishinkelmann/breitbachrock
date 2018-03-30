@@ -12,6 +12,21 @@ html
     attachment: fixed
 
 body
+  a#cta
+    border-radius: 4px
+    font-family: $chineseRocks
+    letter-spacing: 1px
+    color: black
+    margin-right: 40px
+    margin-left: 40px
+    background-color: $colorLogoFill
+    text-shadow: 0 0 4px white
+    padding: 8px 16px
+    box-shadow: 1px 1px 0 1px darken($colorLogoFill, 40%), 2px 2px 0 1px darken($colorLogoFill, 40%)
+
+    &:hover
+      background-color: $colorHighlight
+
   #sidebarToggle
     display: none
 
@@ -45,6 +60,7 @@ body
 
     nav
       margin: 20px
+      font-size: 1em
 
       >a
         display: block
@@ -56,6 +72,12 @@ body
         border-left: 2px solid $colorText
         pointer-events: none
         cursor: default
+
+    a#cta
+      right: 0
+      display: inline
+      margin-left: 20px
+      margin-right: 0
 
   div.pageContent
     div.backgroundWrapper
@@ -139,15 +161,13 @@ body
       margin-left: auto
       margin-right: auto
       height: $navHeight
-      padding-left: 20px
-      padding-right: 20px
+      padding-left: 5vw
+      padding-right: 5vw
 
       .header-logo
         width: 75px
         position: absolute
         margin-top: 10px
-
-
 
         @media all and (max-width: 1150px)
           left: 7%
@@ -174,12 +194,21 @@ body
           pointer-events: none
           cursor: default
 
+      a#cta
+        position: absolute
+        margin-top: 10px
+        right: 40px
+
+        &:active
+            margin-top: 13px
+            right: 37px
+            box-shadow: none
+
 
       h2.title
         font-size: 1.2em
         display: none
         position: absolute
-        top: 0.25em
 
   @media all and (max-width: $navCollapseWidth)
     header
@@ -187,8 +216,11 @@ body
       .headerWrapper
         nav
           display: none
+        a#cta
+          display: none
         h2.title
           display: block
+          font-size: 1.6em
 
     h2.title
       display: none
@@ -279,3 +311,6 @@ body
           &:hover, &:focus
             color: $colorHighlight
           text-shadow: 0 0.1em 0.1em $colorLogoShadow
+
+  @media all and (max-width: $navCollapseWidth)
+    font-size: 0.8em
