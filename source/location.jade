@@ -1,0 +1,36 @@
+extends _import/page_layout
+
+block pageTitle
+  title Location - Breitbach Rock Open Air
+
+block navBar
+  nav 
+    - var site = "location"
+    include _import/nav.jade 
+    
+block headerTitle
+  h2.title Location
+
+block mainContent
+ div.box.location
+  h2.title Location
+  p Was, wo und wie? Hier findet ihr alle Infos rund um den Festplatz.
+  
+  img(src="assets/img/areal.png", alt="Umgebungsplan")
+  
+  ul.location
+    li #[span.parkplatz Parkplatz] Wie gewohnt könnt ihr auf dem nahegelegenen Parkplatz kostenlos euer Auto abstellen.
+    li #[span.camping Camping] Wenn ihr über Nacht bleiben wollt, schlagt ihr euer Zelt auf dem Konzertgelände angrenzenden Campingplatz auf.
+    li #[span.konzert Konzertgelände] Auf dem Konzertgelände findet ihr neben guter Musik auch reichliches Angebot für das leibliche Wohl.
+  
+  img(src="assets/img/konzertgelände.png", alt="Konzertgeländeplan")
+  
+  ul.location
+    li #[span.getraenke Getränke] Am Getränkestand erhltet ihr sowohl alkoholfreie Getränke als auch frisch gezapftes Bier vom Fass.
+    li #[span.bar Bar] Mischgetränke und Hochprozentiges gibt's ab 19:00 Uhr an der Bar.
+    li #[span.grill Grill] Hier werdet ihr mit Würstchen und Schwenkbraten vom Grill sowie Fritten versorgt.
+    li #[span.merch Merch] Ihr wollt euch mit T-Shirts und CDs eurer Lieblingsbands eindecken? Kein Problem, am Merchandise-Stand werdet ihr sicherlich fündig.
+    li #[span.kasse Kasse] Euer Festivalbändchen für den Eintritt erhaltet ihr an der Kasse.
+  
+  
+  

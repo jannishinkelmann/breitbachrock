@@ -1,0 +1,62 @@
+.box.location
+  img
+    max-width: 48%
+    height: auto
+    float: right
+    margin-left: 2%
+    margin-bottom: 2%
+
+    &:nth-of-type(2n+1)
+      float: left
+      margin-left: 0em
+      margin-right: 2%
+
+    @media all and (max-width: 640px)
+      max-width: 100%
+      float: none
+      margin-left: 0em
+
+  +clearfix()
+
+  ul.location
+    list-style-type: none
+
+    li
+      margin-top: 1.2em
+      margin-bottom: 1.2em
+
+      span
+        font-family: $chineseRocks
+        font-size: 1.3em
+        border-radius: 0.4em
+        padding: 0.2em
+        padding-left: 0.4em
+        padding-right: 0.4em
+        margin-right: 0.3em
+        line-height: 2
+        text-shadow:  1px  1px 1px black
+
+        &.getraenke
+          background-color: orange
+
+        &.bar
+          background-color: deeppink
+
+        &.merch
+          background-color: limegreen
+
+        &.grill
+          background-color: aqua
+
+        &.kasse
+          background-color: darkcyan
+
+        &.parkplatz
+          background-color: grey
+
+        &.camping
+          background-color: lime
+
+        &.konzert
+          background-color: white
+          color: $colorLogoFill
