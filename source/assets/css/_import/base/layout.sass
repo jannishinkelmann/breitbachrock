@@ -27,6 +27,14 @@ body
     &:hover
       background-color: $colorHighlight
 
+    &.disabled
+      pointer-events: none
+      cursor: default
+      text-decoration: none
+      background-color: darken(dimgrey, 20%)
+      box-shadow: 1px 1px 0 1px darken(dimgrey, 30%), 2px 2px 0 1px darken(dimgrey, 30%)
+      text-shadow: none
+
   #sidebarToggle
     display: none
 
