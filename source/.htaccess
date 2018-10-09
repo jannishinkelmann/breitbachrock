@@ -1,3 +1,8 @@
+RewriteEngine on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
+RewriteCond %{HTTP_HOST} ^breitbachrock.de$ [NC]
+RewriteRule ^.*$ https://www.breitbachrock.de%{REQUEST_URI} [L,R=301]
+
 <ifModule mod_gzip.c>
 mod_gzip_on Yes
 mod_gzip_dechunk Yes
