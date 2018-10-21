@@ -1,0 +1,166 @@
+a#cta
+  right: 0
+  display: inline
+  margin-left: 20px
+  margin-right: 0
+
+  a#cta
+    border-radius: 4px
+    font-family: $chineseRocks
+    letter-spacing: 1px
+    color: black
+    margin-right: 40px
+    margin-left: 40px
+    background-color: $colorLogoFill
+    text-shadow: 0 0 4px white
+    padding: 8px 16px
+    box-shadow: 1px 1px 0 1px darken($colorLogoFill, 40%), 2px 2px 0 1px darken($colorLogoFill, 40%)
+
+    &:hover
+      background-color: $colorHighlight
+
+    &.disabled
+      pointer-events: none
+      cursor: default
+      text-decoration: none
+      background-color: darken(dimgrey, 20%)
+      box-shadow: 1px 1px 0 1px darken(dimgrey, 30%), 2px 2px 0 1px darken(dimgrey, 30%)
+      text-shadow: none
+
+a#cta
+  position: absolute
+  margin-top: 10px
+  right: 40px
+
+  &:active
+      margin-top: 13px
+      right: 37px
+      box-shadow: none
+
+
+h2.title
+  font-size: 1.2em
+  display: none
+  position: absolute
+
+
+header
+  display: block
+  position: fixed
+  top: 0px
+  width: 100%
+  z-index: 100
+  height: $navHeight
+  background-color: rgba(0, 0, 0, 0.9)
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.6)
+  backdrop-filter: blur(3px)
+
+  .headerWrapper
+    display: block
+    position: relative
+    z-index: 100
+    max-width: $contentSectionWidth
+    margin-left: auto
+    margin-right: auto
+    height: $navHeight
+    padding-left: 5vw
+    padding-right: 5vw
+
+    nav
+      display: inline-block
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      margin-top: -5px
+
+      a
+        margin-left: 2em
+        color: white
+        @include padding(0.5em null)
+        text-shadow: 0 0.1em 0.2em black
+
+      a:first-child
+        margin-left: 0
+
+      a.active
+        border-bottom: 2px solid white
+        pointer-events: none
+        cursor: default    
+
+@media all and (max-width: $navCollapseWidth)
+  header
+    z-index: 200
+    .headerWrapper
+      nav
+        display: none
+      a#cta
+        display: none
+      h2.title
+        display: block
+        font-size: 1.6em
+
+  h2.title
+    display: none
+
+label.toggle
+  cursor: pointer
+  +size(40px)
+  display: none
+  position: fixed
+  top: 13px
+  z-index: 500
+  right: 3%
+
+  svg
+    fill: white
+
+  div.close-menu-ico
+    display: none
+
+  @media all and (max-width: $navCollapseWidth)
+    display: inline-block
+
+#sidebarToggle
+  display: none
+
+  &:checked
+    ~ div.sideBar
+      right: 0px
+
+    ~ div.pageContent
+      filter: brightness(25%)
+
+      header > a
+        display: none
+
+    ~ label.toggle
+      position: fixed
+      right: 20px + $sideBarWidth
+
+      div.close-menu-ico
+        display: inline-block
+
+      div.menu-burger-ico
+        display: none
+
+div.sideBar
+  +position(fixed, 0px (-$sideBarWidth) 0px null)
+  z-index: 1000
+  width: $sideBarWidth
+  background-color: black
+
+  nav
+    margin: 20px
+    font-size: 1em
+
+    >a
+      display: block
+      margin-bottom: 2em
+      padding-left: 1em
+      color: $colorText
+
+    a.active
+      border-left: 2px solid $colorText
+      pointer-events: none
+      cursor: default

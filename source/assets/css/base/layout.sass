@@ -1,0 +1,155 @@
+body, html
+  +size(100%)
+  margin: 0
+  position: relative
+
+html
+  background:
+    image: url(../img/bg.jpg)
+    repeat: no-repeat, no-repeat
+    size: cover
+    blend-mode: overlay-normal
+    attachment: fixed
+
+body
+  .chineseRocks
+    font-family: $chineseRocks
+
+  padding-top: $navHeight
+
+  div.pageContent
+    div.backgroundWrapper
+      min-height: 100vh
+      width: 100vw
+      position: fixed
+      top: 0
+      bottom: 0
+      z-index: -1
+
+      background:
+        image: url(../img/bg.jpg)
+        repeat: no-repeat, no-repeat
+        size: cover
+        blend-mode: overlay-normal
+
+    div.box
+      width: 86vw
+      display: block
+      @include margin(2vh 3vw)
+      @include padding(1vh 4vw)
+      z-index: 5
+      text-shadow: 0 0.1em 0.5em black
+      p
+        line-height: 1.7em
+
+      @media all and (min-width: 1150px)
+        @include margin(null auto null auto)
+        @include padding(null 40px)
+        width: $contentSectionWidth
+
+      @media all and (min-width: 520px)
+        p
+          padding-left: 1em
+
+      background-color: $overlayBg
+      box-shadow: 0 5px 10px darken($overlayBg, 50%)
+      backdrop-filter: blur(3px)
+
+  color: $colorText
+  font:
+    family: $fontStack
+    weight: 300
+    smoothing: antialiased
+
+  h1, h3, h4, h5
+    padding-top: 1em
+
+  a
+    color: $colorLogoFill
+    text-decoration: none
+    outline: 0
+
+  a:hover, a:focus
+    color: $colorHighlight
+
+  .bbr-logo
+    path
+      fill: $colorLogoFill
+      stroke: $colorLogoStroke
+
+  .title
+    padding-top: 0 
+
+  .twoColContainer
+    display: flex
+    justify-content: space-around
+
+    section
+      max-width: 40%
+
+    @media all and (max-width: 1140px)
+      flex-direction: column
+
+      section
+        max-width: 100%
+
+  footer
+    .footerContent
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @media all and (max-width: $footerCollapseWidth)
+        flex-direction: column
+        section.logo
+          padding-right: 0px
+      position: relative
+      z-index: 100
+      max-width: $contentSectionWidth
+      padding: 50px 20px
+      margin-left: auto
+      margin-right: auto
+
+      section
+        margin: 10px
+
+      .socialmedia
+        display: inline
+        float: right
+
+        a
+          margin-left: 30px
+          @media all and (max-width: 380px)
+            margin-left: 15px
+          &:first-child
+            margin-left: 0px
+
+          .socialButton
+            display: inline-block
+            +size(40px)
+            +margin(2px)
+            filter: drop-shadow(0 2px 1px $colorLogoShadow)
+
+            svg
+              +size(100%, 100%)
+
+      section.logo
+        padding-right: 192px-75px
+        @media all and (max-width: $footerCollapseWidth)
+          padding-right: 0px
+
+        .footer-logo
+          width: 75px
+          position: inline
+
+        a
+          color: white
+          font-size: modular-scale(-1)
+          &:hover, &:focus
+            color: $colorHighlight
+          text-shadow: 0 0.1em 0.1em $colorLogoShadow
+
+  @media all and (max-width: $navCollapseWidth)
+    font-size: 0.8em
+
+strong
+  font-weight: bold
