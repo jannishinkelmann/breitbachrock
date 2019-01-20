@@ -1,41 +1,45 @@
-a#cta
-  right: 0
-  display: inline
-  margin-left: 20px
-  margin-right: 0
 
+
+a#cta
+  border-radius: 4px
+  font-family: $chineseRocks
+  letter-spacing: 1px
+  color: black
+  margin-right: 40px
+  margin-left: 40px
+  background-color: $colorLogoFill
+  text-shadow: 0 0 4px white
+  padding: 8px 16px
+  box-shadow: 1px 1px 0 1px darken($colorLogoFill, 40%), 2px 2px 0 1px darken($colorLogoFill, 40%)
+
+  &:hover
+    background-color: $colorHighlight
+
+  &.disabled
+    pointer-events: none
+    cursor: default
+    text-decoration: none
+    background-color: darken(dimgrey, 20%)
+    box-shadow: 1px 1px 0 1px darken(dimgrey, 30%), 2px 2px 0 1px darken(dimgrey, 30%)
+    text-shadow: none
+
+div.sideBar
   a#cta
-    border-radius: 4px
-    font-family: $chineseRocks
-    letter-spacing: 1px
-    color: black
-    margin-right: 40px
-    margin-left: 40px
-    background-color: $colorLogoFill
-    text-shadow: 0 0 4px white
-    padding: 8px 16px
-    box-shadow: 1px 1px 0 1px darken($colorLogoFill, 40%), 2px 2px 0 1px darken($colorLogoFill, 40%)
+    right: 0
+    display: inline
+    margin-left: 20px
+    margin-right: 0
 
-    &:hover
-      background-color: $colorHighlight
+div.headerWrapper
+  a#cta
+    position: absolute
+    margin-top: 10px
+    right: 40px
 
-    &.disabled
-      pointer-events: none
-      cursor: default
-      text-decoration: none
-      background-color: darken(dimgrey, 20%)
-      box-shadow: 1px 1px 0 1px darken(dimgrey, 30%), 2px 2px 0 1px darken(dimgrey, 30%)
-      text-shadow: none
-
-a#cta
-  position: absolute
-  margin-top: 10px
-  right: 40px
-
-  &:active
-      margin-top: 13px
-      right: 37px
-      box-shadow: none
+    &:active
+        margin-top: 13px
+        right: 37px
+        box-shadow: none
 
 
 h2.title
@@ -86,7 +90,7 @@ header
       a.active
         border-bottom: 2px solid white
         pointer-events: none
-        cursor: default    
+        cursor: default
 
 @media all and (max-width: $navCollapseWidth)
   header
