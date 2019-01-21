@@ -7,9 +7,7 @@ block headerTitle
   h2.title AGB
   
 block navBar
-  nav 
-    - var site = "agb"
-    include _import/nav.pug
+  +navBar("agb")
 
 block mainContent
  div.box.rules

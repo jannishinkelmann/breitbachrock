@@ -7,9 +7,7 @@ block headerTitle
   h2.title Anfahrt
 
 block navBar
-  nav 
-    - var site = "anfahrt"
-    include _import/nav.pug
+  +navBar("anfahrt")
 
 block mainContent
  div.box.anfahrt

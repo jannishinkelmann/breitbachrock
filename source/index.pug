@@ -3,9 +3,7 @@ block pageTitle
   title Breitbach Rock Open Air
   
 block navBar
-  nav 
-    - var site = "start"
-    include _import/nav.pug
+  +navBar("start")
 
 block mainContent
   div.container-index.margintop  
@@ -22,7 +20,7 @@ block mainContent
 
     div.box
       div.fullbox
-        h2 Lineup 2018  
+        h2 Lineup 2019  
          
         a.bandThumb(href="bands.html#herzlos")
           div.thumbnailWrapper.herzlos

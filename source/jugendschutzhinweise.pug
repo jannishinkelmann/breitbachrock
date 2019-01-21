@@ -4,9 +4,7 @@ block pageTitle
   title Jugendschutz - Breitbach Rock Open Air
 
 block navBar
-  nav 
-    - var site = "jugendschutzhinweise"
-    include _import/nav.pug 
+  +navBar("jugendschutzhinweise")
     
 block headerTitle
   h2.title Jugendschutz

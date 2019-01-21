@@ -4,9 +4,7 @@ block pageTitle
   title Bands - Breitbach Rock Open Air
 
 block navBar
-  nav 
-    - var site = "lineup"
-    include _import/nav.pug  
+  +navBar("lineup") 
     
 block headerTitle
   h2.title Bands

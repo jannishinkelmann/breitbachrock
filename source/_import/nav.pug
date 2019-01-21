@@ -1,8 +1,19 @@
--var sites = [{ keyword:"start", url:".", title:"Start", enabled:"true" }, { keyword:"lineup", url:"lineup.html", title:"Lineup", enabled:"false" }, { keyword:"location", url:"location.html", title:"Location", enabled:"true" }, { keyword:"camping", url:"camping.html", title:"Camping", enabled:"true" }, { keyword:"anfahrt", url:"anfahrt.html", title:"Anfahrt", enabled:"true" }, { keyword:"bbr17", url:"bbr17.html", title:"BBR17", enabled:"false" }, { keyword:"bbr18", url:"bbr18.html", title:"BBR18", enabled:"true" }]
-
-for s in sites
-  if s.enabled == "true"
-    if site == s.keyword
-      a.active(href=s.url) #{s.title}
-    else
-      a(href=s.url) #{s.title}
+mixin navBar(activeSite)
+  -
+    var sites = [
+      { keyword:"start",    url:".",              title:"Start",    enabled:"true" }, 
+      { keyword:"lineup",   url:"lineup.html",    title:"Lineup",   enabled:"false" }, 
+      { keyword:"location", url:"location.html",  title:"Location", enabled:"true" }, 
+      { keyword:"camping",  url:"camping.html",   title:"Camping",  enabled:"true" }, 
+      { keyword:"anfahrt",  url:"anfahrt.html",   title:"Anfahrt",  enabled:"true" },
+      { keyword:"bbr17",    url:"bbr17.html",     title:"BBR17",    enabled:"false" }, 
+      { keyword:"bbr18",    url:"bbr18.html",     title:"BBR18",    enabled:"true" }
+    ]
+    
+  nav
+    for s in sites
+      if s.enabled == "true"
+        if s.keyword == activeSite
+          a.active(href=s.url) #{s.title}
+        else
+          a(href=s.url) #{s.title}

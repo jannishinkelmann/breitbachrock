@@ -4,9 +4,7 @@ block pageTitle
   title Camping - Breitbach Rock Open Air
 
 block navBar
-  nav 
-    - var site = "camping"
-    include _import/nav.pug 
+  +navBar("camping")
     
 block headerTitle
   h2.title Camping
