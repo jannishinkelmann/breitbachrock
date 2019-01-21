@@ -1,13 +1,7 @@
 extends _import/page_layout
 
-block pageTitle
-  title Datenschutz - Breitbach Rock Open Air
-  
-block headerTitle
-  h2.title Datenschutz
-  
-block navBar
-  +navBar("datenschutz")
+block pageName
+  -var pageName = "Datenschutzhinweise"
 
 block mainContent
  div.box.rules

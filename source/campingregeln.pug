@@ -1,13 +1,7 @@
 extends _import/page_layout
 
-block pageTitle
-  title Campingregeln - Breitbach Rock Open Air
-  
-block navBar
-  +navBar("campingregeln")
-    
-block headerTitle
-  h2.title Campingregeln
+block pageName
+  -var pageName = "Campingregeln"
 
 block mainContent
  div.box.rules

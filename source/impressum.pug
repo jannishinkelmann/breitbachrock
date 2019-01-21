@@ -1,13 +1,7 @@
 extends _import/page_layout
 
-block pageTitle
-  title Impressum - Breitbach Rock Open Air
-  
-block navBar
-  +navBar("impressum")
-    
-block headerTitle
-  h2.title Impressum
+block pageName
+  -var pageName = "Impressum"
   
 block mainContent
  div.box.rules

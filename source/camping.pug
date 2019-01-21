@@ -1,13 +1,7 @@
 extends _import/page_layout
 
-block pageTitle
-  title Camping - Breitbach Rock Open Air
-
-block navBar
-  +navBar("camping")
-    
-block headerTitle
-  h2.title Camping
+block pageName
+  -var pageName = "Camping"
 
 block mainContent
  div.box.camping

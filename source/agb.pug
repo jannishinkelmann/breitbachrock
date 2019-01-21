@@ -1,13 +1,7 @@
 extends _import/page_layout
 
-block pageTitle
-  title AGB - Breitbach Rock Open Air
-  
-block headerTitle
-  h2.title AGB
-  
-block navBar
-  +navBar("agb")
+block pageName
+  -var pageName = "AGB"
 
 block mainContent
  div.box.rules

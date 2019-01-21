@@ -1,13 +1,7 @@
 extends _import/page_layout
 
-block pageTitle
-  title Jugendschutz - Breitbach Rock Open Air
-
-block navBar
-  +navBar("jugendschutzhinweise")
-    
-block headerTitle
-  h2.title Jugendschutz
+block pageName
+  -var pageName = "Jugendschutzhinweise"
 
 block mainContent
   div.box.rules.jugendschutz

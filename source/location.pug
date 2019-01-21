@@ -1,13 +1,7 @@
 extends _import/page_layout
 
-block pageTitle
-  title Location - Breitbach Rock Open Air
-
-block navBar
-  +navBar("location")
-    
-block headerTitle
-  h2.title Location
+block pageName
+  -var pageName = "Location"
 
 block mainContent
  div.box.location

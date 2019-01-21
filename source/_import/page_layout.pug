@@ -1,10 +1,11 @@
 doctype html
 include nav
+block pageName
 
 html(lang="de")
   head
-    include meta
-    block pageTitle
+    include meta    
+    title #{pageName} - Breitbach Rock Open Air
     include link
     include matomo
     
@@ -12,7 +13,7 @@ html(lang="de")
     input#sidebarToggle(type="checkbox" name="" value="")
     
     div.sideBar
-      block navBar
+      +navBar(pageName)
       a(href="https://shop.ticketpay.de/N1XF4U8L")#cta Tickets ≫
       
     label.toggle(for="sidebarToggle")
@@ -27,8 +28,8 @@ html(lang="de")
     
       header
         div.headerWrapper
-          block navBar
-          block headerTitle
+          +navBar(pageName)
+          h2.title #{pageName}
           a(href="https://shop.ticketpay.de/N1XF4U8L")#cta Tickets ≫
 
       block mainContent
