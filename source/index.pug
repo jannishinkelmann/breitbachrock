@@ -19,42 +19,34 @@ block mainContent
     div.box
       div.fullbox
         h2 Lineup 2019  
-         
-        a.bandThumb(href="lineup.html#herzlos")
-          div.thumbnailWrapper.herzlos
-            div.textWrapper
-              h3 Herzlos
-                 
-        a.bandThumb(href="lineup.html#horses")
-          div.thumbnailWrapper.horses
-            div.textWrapper
-              h3 Surfing Horses
-               
-        a.bandThumb(href="lineup.html#dreimillionen")
-          div.thumbnailWrapper.dreimillionen
-            div.textWrapper
-              h3 Dreimillionen
-        
-      div.halfbox
-        h2 Location
-        a(href="location.html"): img(src="assets/img/konzertgelände.png", alt="Übersichtskarte Konzertgelände")
-        p Übersichtskarten und Informationen zum Angebot auf dem Konzertgelände findet ihr hier. 
-        p.right: a(href="location.html") Weitere Informationen ≫
-        
-      div.halfbox
-        h2 Camping
-        a(href="camping.html"): img(src="assets/img/camper.jpg", alt="Camper (Symbolbild)")
-        p Bei uns könnt ihr natürlich auch campen, wie sich das für ein ordentliches Festival gehört. Wir haben das bei dem Landwirt vor Ort für euch klar gemacht. Samstag Nacht muss keiner mehr nach Hause!
-        p.right: a(href="camping.html") Weitere Informationen ≫
-        
-      div.halfbox
-        h2 Anfahrt
-        a(href="anfahrt.html"): img(src="assets/img/umgebung.png", alt="Anfahrtskarte")
-        p Hier haben wir euch Anfahrtswege, Karten und Hinweise zusammengestellt. Fahrt vorsichtig, wir sehen uns dann auf dem Festivalplatz! 
-        p.right: a(href="anfahrt.html") Weitere Informationen ≫
-        
-      div.halfbox
-        h2 Breitbach Rock 2018
-        a(href="bbr18.html"): img(src="assets/img/vielenDank.jpg", alt="Vielen Dank")
-        p Als Rückschau auf das Fest von letztem Jahr haben wir euch hier ein paar Bilder und Videos zusammengetragen.
-        p.right: a(href="bbr18.html") Weitere Informationen ≫
+        +bandThumbNail("Herzlos", "herzlos")
+        +bandThumbNail("Surfing Horses", "horses")
+        +bandThumbNail("Dreimillionen", "dreimillionen")
+              
+      +halfbox(
+        "Location",
+        "location.html",
+        "assets/img/konzertgelände.png",
+        "Übersichtskarten und Informationen zum Angebot auf dem Konzertgelände findet ihr hier."
+      )
+      
+      +halfbox(
+        "Camping",
+        "camping.html",
+        "assets/img/camper.jpg",
+        "Bei uns könnt ihr natürlich auch campen, wie sich das für ein ordentliches Festival gehört. Wir haben das bei dem Landwirt vor Ort für euch klar gemacht. Samstag Nacht muss keiner mehr nach Hause!"
+      )
+      
+      +halfbox(
+        "Anfahrt",
+        "anfahrt.html",
+        "assets/img/umgebung.png",
+        "Hier haben wir euch Anfahrtswege, Karten und Hinweise zusammengestellt. Fahrt vorsichtig, wir sehen uns dann auf dem Festivalplatz!"
+      )
+      
+      +halfbox(
+        "Breitbach Rock 2018",
+        "bbr18.html",
+        "assets/img/vielenDank.jpg",
+        "Als Rückschau auf das Fest von letztem Jahr haben wir euch hier ein paar Bilder und Videos zusammengetragen."
+      )

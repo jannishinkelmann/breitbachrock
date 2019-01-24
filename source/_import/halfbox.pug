@@ -1,0 +1,6 @@
+mixin halfbox(caption, ref, img, paragraph)
+  div.halfbox
+    h2 #{caption}
+    a(href=ref): img(src=img)
+    p #{paragraph} 
+    p.right: a(href=ref) Weitere Informationen ≫
