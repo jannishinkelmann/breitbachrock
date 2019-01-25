@@ -5,8 +5,6 @@ a#cta
   font-family: $chineseRocks
   letter-spacing: 1px
   color: black
-  margin-right: 40px
-  margin-left: 40px
   background-color: $colorLogoFill
   text-shadow: 0 0 4px white
   padding: 8px 16px
@@ -34,19 +32,12 @@ div.headerWrapper
   a#cta
     position: absolute
     margin-top: 10px
-    right: 40px
+    right: 30px
 
     &:active
         margin-top: 13px
         right: 37px
         box-shadow: none
-
-
-.headerWrapper > h2.title
-  font-size: 1.2em
-  display: none
-  position: absolute
-
 
 header
   display: block
@@ -98,14 +89,6 @@ header
     .headerWrapper
       nav
         display: none
-      a#cta
-        display: none
-      h2.title
-        display: block
-        font-size: 1.6em
-
-  h2.title
-    display: none
 
 label.toggle
   cursor: pointer
@@ -114,7 +97,7 @@ label.toggle
   position: fixed
   top: 13px
   z-index: 500
-  right: 3%
+  left: 30px
 
   svg
     fill: white
@@ -130,7 +113,7 @@ label.toggle
 
   &:checked
     ~ div.sideBar
-      right: 0px
+      left: 0px
 
     ~ div.pageContent
       filter: brightness(25%)
@@ -140,7 +123,7 @@ label.toggle
 
     ~ label.toggle
       position: fixed
-      right: 20px + $sideBarWidth
+      left: 20px + $sideBarWidth
 
       div.close-menu-ico
         display: inline-block
@@ -160,11 +143,12 @@ div.sideBar
 
     >a
       display: block
+      text-align: right
       margin-bottom: 2em
-      padding-left: 1em
+      padding-right: 1em
       color: $colorText
 
     a.active
-      border-left: 2px solid $colorText
+      border-right: 2px solid $colorText
       pointer-events: none
       cursor: default
