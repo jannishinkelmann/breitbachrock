@@ -26,8 +26,10 @@ block mainContent
   p Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: 23/157/31097
   
   h2#kontakt Kontakt
-  p Für weitere Informationen und Feedback schreibt uns eine Email an #[a(href="mailto:info@breitbachrock.de") info@breitbachrock.de]
-  p Ausschließlich für Bandanfragen: #[a(href="mailto:bands@breitbachrock.de") bands@breitbachrock.de]
+  p Für weitere Informationen und Feedback schreibt uns eine Email an 
+    +uglifyEmailAddress('info', 'breitbachrock', 'de')
+  p Ausschließlich für Bandanfragen: 
+    +uglifyEmailAddress('bands', 'breitbachrock', 'de')
   
   h3 Social Media
   ul
