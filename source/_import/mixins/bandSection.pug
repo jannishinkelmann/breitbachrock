@@ -1,0 +1,14 @@
+mixin bandSection(b)
+    section.band
+        h3(id=b.shortName) #{b.name}
+        p #{b.discription}
+        img(src=b.image, alt= b.name + ' Bandfoto')
+
+        for t in b.text
+            p #{t}
+
+        div.links
+        h4 Weitere Informationen:
+        ul
+            for l in b.links
+                li: a(href=l.url target='_blanc') #{l.name} ≫
