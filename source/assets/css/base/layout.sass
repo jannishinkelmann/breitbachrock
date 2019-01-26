@@ -38,7 +38,7 @@ body
       @include margin(2vh 3vw)
       @include padding(1vh 4vw)
       z-index: 5
-      text-shadow: 0 0.1em 0.5em black
+      text-shadow: 0 0.1em 0.5em $color-shadow
       p
         line-height: 1.7em
 
@@ -52,7 +52,7 @@ body
           padding-left: 1em
 
       background-color: $overlayBg
-      box-shadow: 0 5px 10px darken($overlayBg, 50%)
+      box-shadow: 0 5px 10px $color-shadow
       backdrop-filter: blur(3px)
 
   color: $colorText
@@ -65,17 +65,17 @@ body
     padding-top: 1em
 
   a
-    color: $colorLogoFill
+    color: $color-main
     text-decoration: none
     outline: 0
 
   a:hover, a:focus
-    color: $colorHighlight
+    color: $color-highlight
 
   .bbr-logo
     path
-      fill: $colorLogoFill
-      stroke: $colorLogoStroke
+      fill: $color-main
+      stroke: $color-stroke
 
   .title
     padding-top: 0 
@@ -127,7 +127,7 @@ body
             display: inline-block
             +size(40px)
             +margin(2px)
-            filter: drop-shadow(0 2px 1px $colorLogoShadow)
+            filter: drop-shadow(0 2px 1px $color-shadow)
 
             svg
               +size(100%, 100%)
@@ -145,8 +145,8 @@ body
           color: white
           font-size: modular-scale(-1)
           &:hover, &:focus
-            color: $colorHighlight
-          text-shadow: 0 0.1em 0.1em $colorLogoShadow
+            color: $color-highlight
+          text-shadow: 0 0.1em 0.1em $color-shadow
 
   @media all and (max-width: $navCollapseWidth)
     font-size: 0.8em

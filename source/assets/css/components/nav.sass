@@ -5,13 +5,13 @@ a#cta
   font-family: $chineseRocks
   letter-spacing: 1px
   color: black
-  background-color: $colorLogoFill
+  background-color: $color-main
   text-shadow: 0 0 4px white
   padding: 8px 16px
-  box-shadow: 1px 1px 0 1px darken($colorLogoFill, 40%), 2px 2px 0 1px darken($colorLogoFill, 40%)
+  box-shadow: 1px 1px 0 1px darken($color-main, 40%), 2px 2px 0 1px darken($color-main, 40%)
 
   &:hover
-    background-color: $colorHighlight
+    background-color: $color-highlight
 
   &.disabled
     pointer-events: none
@@ -47,7 +47,7 @@ header
   z-index: 100
   height: $navHeight
   background-color: rgba(0, 0, 0, 0.9)
-  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.6)
+  box-shadow: 0 5px 10px $color-shadow
   backdrop-filter: blur(3px)
 
   .headerWrapper
@@ -73,7 +73,7 @@ header
         margin-left: 2em
         color: white
         @include padding(0.5em null)
-        text-shadow: 0 0.1em 0.2em black
+        text-shadow: 0 0.1em 0.2em $color-shadow
 
       a:first-child
         margin-left: 0
