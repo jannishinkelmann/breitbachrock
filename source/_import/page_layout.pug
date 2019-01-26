@@ -10,44 +10,14 @@ html(lang="de")
     include link
     include matomo
     
-  body
-    input#sidebarToggle(type="checkbox" name="" value="")
-    
-    div.sideBar
-      +navBar(pageName)
-      
-    label.toggle(for="sidebarToggle")
-      div.menu-burger-ico
-        include graphics/menu_ico.svg
-        
-      div.close-menu-ico
-        include graphics/cross_ico.svg 
-    
+  body 
     div.pageContent
       div.backgroundWrapper
+
+      include sideBar
     
-      header
-        div.headerWrapper
-          +navBar(pageName)
-          a(href="https://shop.ticketpay.de/N1XF4U8L")#cta Tickets ≫
+      include header
 
       block mainContent
       
-      footer
-        div.footerContent
-          section.logo
-            a(href=".")
-              div.bbr-logo.footer-logo
-                include graphics/bbr-logo.svg
-            
-          section.links #[a(href="impressum.html") Impressum] | #[a(href="agb.html") AGB] | #[a(href="datenschutzhinweise.html") Datenschutz]
-          section.socialmedia
-            a(href="https://www.instagram.com/breitbachrock" target="_blanc")
-              div.socialButton
-                include graphics/instagram.svg
-            a(href="https://www.facebook.com/breitbachrock" target="_blanc")
-              div.socialButton
-                include graphics/facebook.svg
-            a(href="https://www.youtube.com/channel/UCXkACWPkJoTh3vMMJDJo2DQ" target="_blanc")
-              div.socialButton
-                include graphics/youtube.svg
+      include footer

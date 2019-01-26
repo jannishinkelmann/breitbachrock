@@ -1,0 +1,11 @@
+input#sidebarToggle(type="checkbox" name="" value="")
+
+div.sideBar
+  +navBar(pageName)
+  
+label.toggle(for="sidebarToggle")
+  div.menu-burger-ico
+    include graphics/menu_ico.svg
+    
+  div.close-menu-ico
+    include graphics/cross_ico.svg 
