@@ -1,0 +1,23 @@
+doctype html
+include _variables
+include _mixins/all-mixins
+block pageName
+
+html(lang="de")
+  head
+    include _layout/meta    
+    title #{pageName} - Breitbach Rock Open Air
+    include _layout/link
+    include _layout/matomo
+    
+  body 
+    div.pageContent
+      div.backgroundWrapper
+
+      include _layout/sideBar
+    
+      include _layout/header
+
+      block mainContent
+      
+      include _layout/footer
