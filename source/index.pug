@@ -19,32 +19,10 @@ block mainContent
     div.box
       div.fullbox
         h2 Lineup 2019
-        p Weitere Informationen folgen in Kürze!
-              
-      +halfbox(
-        "Location",
-        "location.html",
-        "assets/img/konzertgelände.png",
-        "Übersichtskarten und Informationen zum Angebot auf dem Konzertgelände findet ihr hier."
-      )
-      
-      +halfbox(
-        "Camping",
-        "camping.html",
-        "assets/img/camper.jpg",
-        "Bei uns könnt ihr natürlich auch campen, wie sich das für ein ordentliches Festival gehört. Wir haben das bei dem Landwirt vor Ort für euch klar gemacht. Samstag Nacht muss keiner mehr nach Hause!"
-      )
-      
-      +halfbox(
-        "Anfahrt",
-        "anfahrt.html",
-        "assets/img/umgebung.png",
-        "Hier haben wir euch Anfahrtswege, Karten und Hinweise zusammengestellt. Fahrt vorsichtig, wir sehen uns dann auf dem Festivalplatz!"
-      )
-      
-      +halfbox(
-        "Breitbach Rock 2018",
-        "bbr18.html",
-        "assets/img/vielenDank.jpg",
-        "Als Rückschau auf das Fest von letztem Jahr haben wir euch hier ein paar Bilder und Videos zusammengetragen."
-      )
+        for b in bands
+          if b.announced == "true"
+            +bandThumbNail(b.name, b.shortName)
+
+      for s in sites
+        if s.thumb
+          +halfbox(s)
