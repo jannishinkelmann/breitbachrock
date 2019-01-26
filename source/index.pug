@@ -21,7 +21,8 @@ block mainContent
         h2 Lineup 2019
         for b in bands
           if b.announced == "true"
-            +bandThumbNail(b.name, b.shortName)
+            +bandThumbNail(b)
+        p.right und viele weitere
 
       for s in sites
         if s.thumb

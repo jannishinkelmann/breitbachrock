@@ -1,5 +1,5 @@
-mixin bandThumbNail(bandName, shortBandName)
-  a.bandThumb(href="lineup.html#" + shortBandName)
-    div.thumbnailWrapper(class=shortBandName)
+mixin bandThumbNail(band)
+  a.bandThumb(href="lineup.html#" + band.shortName)
+    div.thumbnailWrapper(class=band.shortName, style="background-image: url(" + band.image + ')')
       div.textWrapper
-        h3 #{bandName}
+        h3 #{band.name}
