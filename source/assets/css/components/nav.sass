@@ -2,21 +2,22 @@ a#cta
   border-radius: 4px
   font-family: $chineseRocks
   letter-spacing: 1px
-  color: black
+  color: $color-shadow
   background-color: $color-main
   text-shadow: 0 0 4px white
   padding: 8px 16px
-  box-shadow: 1px 1px 0 1px darken($color-main, 40%), 2px 2px 0 1px darken($color-main, 40%)
+  box-shadow: 1px 1px 0 1px shade($color-main, 40%), 2px 2px 0 1px shade($color-main, 40%)
 
   &:hover
     background-color: $color-highlight
 
   &.disabled
     pointer-events: none
-    cursor: default
+    cursor: not-allowed
+    color: shade(dimgrey, 40%)
     text-decoration: none
-    background-color: darken(dimgrey, 20%)
-    box-shadow: 1px 1px 0 1px darken(dimgrey, 30%), 2px 2px 0 1px darken(dimgrey, 30%)
+    background-color: dimgrey
+    box-shadow: 1px 1px 0 1px shade(dimgrey, 30%), 2px 2px 0 1px shade(dimgrey, 30%)
     text-shadow: none
 
 div.sideBar
