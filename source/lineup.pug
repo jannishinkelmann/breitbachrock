@@ -6,7 +6,12 @@ block pageName
 block mainContent
   div.box.lineup
     h2.title Lineup 2019
-     
+    h2.day Freitag
     for b in bands
-      if b.announced == "true"
+      if b.announced == "true" && b.day == "fr"
+        +bandSection(b)
+
+    h2.day Samstag
+    for b in bands
+      if b.announced == "true" && b.day == "sa"
         +bandSection(b)
